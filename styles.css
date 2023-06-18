@@ -1,0 +1,193 @@
+/* styles.css */
+
+/* Reset default browser styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: monospace;
+  line-height: 1.5;
+  background-color: #9b7087;
+  background-image: url("bg2.jpg");
+  background-position: center center; 
+  font-size: 16px;
+}
+
+header {
+  text-align: center;
+  background-color: #7f175b;
+  padding: 20px;
+  color: #fff;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+h1 {
+  margin: 0;
+  font-size: 50px;
+}
+
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #e3acc8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+#submit-button {
+  padding: 10px 20px;
+  background-color: #7f175b;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#matrix-table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+#matrix-table td {
+  text-align: center;
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+#matrix-table td.coefficient-cell {
+  width: calc(100% / (numVariables + 1));
+}
+
+#matrix-table td.constant-cell {
+  width: calc(100% / (numVariables + 1));
+}
+
+#matrix-table td.constant-cell:last-child {
+  border-right: none;
+  width: calc(100% / (numVariables + 1));
+}
+
+#coefficient-table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+#coefficient-table th.coefficient-header {
+  width: calc(75% / varCount);
+}
+
+#coefficient-table th.constant-header {
+  width: calc(25% / varCount);
+}
+
+#coefficient-table td.coefficient-cell {
+  width: calc(75% / varCount);
+}
+
+#coefficient-table td.constant-cell {
+  width: calc(25% / varCount);
+  border-right: 1px solid #ccc;
+}
+
+#coefficient-input h3 {
+  font-size: 22px;
+}
+
+/* CSS for the audio player */
+.audio-player {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.audio-player audio {
+  width: 300px;
+  margin-right: 10px;
+}
+
+.audio-player button {
+  background-color: #7f175b; /* Change the background color to #7f175b */
+  color: #fff; /* Change the text color to white */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.audio-player button:hover {
+  background-color: #fafafa;
+}
+
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative;
+  margin-bottom: 20px;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#dimension-output,
+#equation-matrix-output,
+#solution-output,
+#inverse-output {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  overflow-wrap: break-word;
+}

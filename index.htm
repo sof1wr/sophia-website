@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaussian Elimination Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1 class="centered">Gaussian Elimination Calculator</h1>
+    <p>Welcome to our website. We help to solve your matrix problems using Gaussian Approach^^.</p>
+  </header>
+  
+  <main>
+  </header>
+
+  <main>
+    <section>
+      <h2>Enter the Linear Equations</h2>
+      <div class="input-group">
+        <label for="equation-count">Number of Equations:</label>
+        <input type="number" id="equation-count" min="1" step="1">
+      </div>
+
+      <div class="input-group">
+        <label for="variable-count">Number of Variables:</label>
+        <input type="number" id="variable-count" min="1" step="1">
+      </div>
+
+      <div id="coefficient-input">
+        <h3>Enter the Coefficients and Constants:</h3>
+        <table id="coefficient-table">
+          <tbody id="coefficient-table-body"></tbody>
+        </table>
+      </div>
+        
+
+      <button id="submit-button">Solve Equations</button>
+    </section>
+
+    <section>
+      <h2>Matrix Representation</h2>
+      <div id="equation-matrix-output">
+        <table id="matrix-table">
+          <tbody id="matrix-table-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>Matrix Dimension</h2>
+      <div id="dimension-output"></div>
+    </section>
+
+    <section>
+      <h2>Solution</h2>
+      <div id="solution-output"></div>
+    </section>
+
+    <section>
+      <h2>Inverse Matrix </h2>
+      <div id="inverse-output"></div>
+    </section>
+
+    <div class="about-method">
+      <div>
+        <h3>About the Method</h3>
+        <p>
+          <b>To find the solutions, these are fundamental ideas:</b>
+          <ol>
+            <li>Add multiples of one equation to the others in order to eliminate a variable.</li>
+            <li>Continue this process until only one variable is left.</li>
+            <li>Once this final variable is determined, its value is substituted back into the other equations in order to evaluate the remaining unknowns.</li>
+          </ol>
+        </p>
+        <br>
+        <p>
+          <b>To calculate the inverse matrix, follow these steps:</b>>
+          <ol>
+            <li>Set the matrix (must be square) and append the identity matrix of the same dimension to it.</li>
+            <li>Reduce the left matrix to row echelon form using elementary row operations for the whole matrix (including the right one).</li>
+            <li>As a result, you will get the inverse calculated on the right.</li>
+            <li>If the determinant of the main matrix is zero, the inverse doesn't exist.</li>
+          </ol>
+          <br>
+          <b>To understand the Gaussian Approach better, you may watch these videos.</b>
+        </p>
+      </div> 
+
+      <h2>Gaussian Elimination</h2>
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/eDb6iugi6Uk" frameborder="0" allowfullscreen></iframe>
+      </div>
+    
+      <h2>Inverse of a 3x3 Matrix</h2>
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Fg7_mv3izR0" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </main>
+
+    <div class="audio-player">
+      <audio src="Take Two.mp3" autoplay loop controls class="music-player">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
